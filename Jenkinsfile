@@ -21,7 +21,7 @@ pipeline{
             // One or more steps need to be included within the steps block.
             echo "build $start"
 
-            echo "build $send"
+            echo "build $end"
 
             sh '''pwd && ls -alh
             '''
