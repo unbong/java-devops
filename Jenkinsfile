@@ -26,7 +26,9 @@ pipeline{
             sh '''pwd && ls -alh
             '''
           }
+        }
 
+          // 测试
         stage('test')
         {
             steps{
@@ -36,6 +38,7 @@ pipeline{
         }
 
 
+        // 打包
         stage('package')
         {
             steps{
@@ -44,6 +47,7 @@ pipeline{
             }
         }
 
+        // 部署
         stage('deploye'){
             steps{
                 echo "deploye $start"
@@ -52,18 +56,4 @@ pipeline{
             }
         }
     }
-
-
-
-
-
-        // 测试
-
-        // 打包
-
-
-        // 部署
-
-
-
 }
