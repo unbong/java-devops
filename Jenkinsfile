@@ -15,8 +15,8 @@ pipeline{
         {
             steps{
 
-                sh "set JENKINS_URL=http://8.211.173.132:8080/"
-                sh "set JOB_URL=http://8.211.173.132:8080/job/java-devops/"
+//                 sh "set JENKINS_URL=http://8.211.173.132:8080/"
+//                 sh "set JOB_URL=http://8.211.173.132:8080/job/java-devops/"
                 sh '''
                     printenv
                 '''
@@ -24,7 +24,7 @@ pipeline{
 
 
                 sh " java -version"
-                sh  " git  --versoin "
+                sh  " git  --version "
 
 
             }
