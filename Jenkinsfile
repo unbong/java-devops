@@ -14,19 +14,11 @@ pipeline{
         stage('check')
         {
             steps{
-
-//                 sh "set JENKINS_URL=http://8.211.173.132:8080/"
-//                 sh "set JOB_URL=http://8.211.173.132:8080/job/java-devops/"
                 sh '''
                     printenv
                 '''
-
-
-
                 sh " java -version"
                 sh  " git  --version "
-
-
             }
         }
 
@@ -36,14 +28,23 @@ pipeline{
             //
             //             }
         stage('build') {
+            agent {
+                docker 'maven:3-alpine'
+            }
+
           steps {
+
+
             // One or more steps need to be included within the steps block.
             echo "build $start"
 
+            sh '''pwd && ls -alh'''
+            // 指定jenkins中的特定路径来执行maven
+            sh 'mvn clean package -s "/var/jenkins_home/appconfig/maven/settings.xml" -DskipTests'
+
             echo "build $end"
 
-            sh '''pwd && ls -alh
-            '''
+
           }
         }
 
