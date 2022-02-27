@@ -11,6 +11,19 @@ pipeline{
     // 定义流水线加工 流程
     stages{
 
+        stage('check')
+        {
+            steps{
+                sh '''
+                    printenv
+                '''
+                sh " java -v"
+                sh  " git  --versoin "
+
+
+            }
+        }
+
          // 编译
             // 步骤
             //             steps{
