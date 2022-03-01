@@ -1,10 +1,10 @@
 FROM openjdk:8-jre-alpine
 
 COPY target/*.jar app.jar
-RUN apk add -U tzdata; \
-ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; \
-echo 'Asia/Tokyo' > /etc/timezone; \
-touch /app.jar; \
+#RUN apk add -U tzdata; \
+#ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; \
+#echo 'Asia/Tokyo' > /etc/timezone; \
+#touch /app.jar; \
 
 ENV JAVA_OPTS=""
 ENV PARAMS=""
