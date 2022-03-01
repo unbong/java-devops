@@ -85,7 +85,7 @@ pipeline{
                 echo "deploye $start"
                 sh "docker version"
                 sh '''pwd && ls -alh'''
-                 sh "docker -rm -f java-devops "
+                 sh "docker rm -f java-devops "
                 sh "docker run -d -p 8888:8080 -name java-devops java-devops"
 
                 echo "deploye $end"
