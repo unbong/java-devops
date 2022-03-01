@@ -10,6 +10,6 @@ public class HelloConrtroller {
     @GetMapping("/hello")
     public String hello()
     {
-        return "hello java devops";
+        return "hello java devops  6666";
     }
 }
