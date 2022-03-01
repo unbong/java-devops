@@ -38,7 +38,7 @@ pipeline{
 
           steps {
 
-
+            // for test
             // One or more steps need to be included within the steps block.
             echo "build $start"
 
