@@ -30,6 +30,7 @@ pipeline{
         stage('build') {
             agent {
                 docker 'maven:3-alpine'
+                label 'docker'
                 args '-v /root/.m2:/root/.m2'
             }
 
