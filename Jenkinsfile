@@ -21,7 +21,7 @@ pipeline{
                 sh  " git  --version "
             }
         }
-
+        /// just test
          // 编译
             // 步骤
             //             steps{
